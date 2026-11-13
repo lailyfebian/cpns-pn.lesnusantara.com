@@ -1549,13 +1549,13 @@ footer .list-produk i {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 @media (max-width: 767px) {
     .cta-section {
         background-image: url('public/images/bg-cta.webp');
-        padding: 80px 0;
+        padding: 30px 0;
     }
 }
 
@@ -3053,6 +3053,11 @@ footer .list-produk i {
         height: 48px;
     }
 
+    .preparation-feature-icon i.bi.bi-check2-circle {
+        font-size: 24px !important;
+        line-height: 1 !important;
+    }
+
     .preparation-feature-header h3 {
         font-size: 18px;
     }
@@ -3071,6 +3076,11 @@ footer .list-produk i {
 
     .preparation-feature-footer {
         font-size: 12px;
+    }
+
+    .preparation-feature-footer i.bi.bi-lightbulb {
+        font-size: 18px !important;
+        line-height: 1 !important;
     }
 }
 
