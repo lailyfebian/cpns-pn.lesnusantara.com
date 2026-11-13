@@ -336,6 +336,11 @@ button,
 
 /* Akhir Section CTA */
 
+
+/* ==========================================
+   KEUNGGULAN / STATISTIK
+========================================== */
+
 .keunggulan {
     padding-bottom: 50px;
     margin-top: -50px;
@@ -371,7 +376,7 @@ button,
     font-weight: 700;
 }
 
-/* Flex layout */
+/* FLEX LAYOUT */
 .keunggulan .container .d-flex {
     display: flex;
     flex-wrap: wrap;
@@ -380,7 +385,7 @@ button,
     gap: 10px;
 }
 
-/* Setiap card 4 kolom */
+/* SETIAP CARD 2 KOLOM */
 .keunggulan .container .d-flex>* {
     flex: 0 0 calc(50% - 8px);
     box-sizing: border-box;
@@ -417,21 +422,68 @@ button,
     text-align: center;
 }
 
-/* Tablet dan mobile */
+/* ==========================================
+   LEARNING SECTION
+========================================== */
+
+.learning-section {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.learning-section *,
+.learning-section *::before,
+.learning-section *::after {
+    box-sizing: border-box;
+}
+
+.learning-section-header {
+    width: 100%;
+}
+
+.learning-section-content {
+    width: 100%;
+}
+
+.learning-section-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.learning-section-card {
+    min-width: 0;
+}
+
+.learning-section-icon img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================
+   TABLET DAN MOBILE
+========================================== */
+
 @media only screen and (max-width: 767px) {
+
+    /* KEUNGGULAN */
     .keunggulan {
         margin-top: 50px;
     }
+
     .keunggulan h2 {
         font-size: 20px;
     }
 
     .keunggulan .container {
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .keunggulan .container .count {
-        padding: 20px 0;
+        padding: 20px 15px;
         position: relative;
         margin-top: -20px;
         border-radius: 0 0 20px 20px;
@@ -470,7 +522,48 @@ button,
     .keunggulan .list-keunggulan ul {
         margin-left: -10px;
     }
+
+    /* LEARNING SECTION */
+    .learning-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .learning-section > .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .learning-section-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 }
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media only screen and (max-width: 380px) {
+
+    .keunggulan .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .keunggulan .container .count {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .learning-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
 
 /* Section Kurikulum */
 
@@ -1839,8 +1932,6 @@ footer .list-produk i {
 
 
 
-
-
 /* ==========================================
    MATERIAL SECTION
 ========================================== */
@@ -1860,7 +1951,8 @@ footer .list-produk i {
     box-sizing: border-box;
 }
 
-.material-container {
+.material-container,
+.material-section > .container {
     width: 100%;
     margin: 0 auto;
 }
@@ -2051,6 +2143,13 @@ footer .list-produk i {
         padding: 32px 15px;
     }
 
+    .material-section > .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .material-header {
         margin-bottom: 22px;
     }
@@ -2104,6 +2203,11 @@ footer .list-produk i {
 ========================================== */
 
 @media (max-width: 380px) {
+    .material-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     .material-icon {
         flex-basis: 56px;
         width: 56px;
@@ -2114,6 +2218,7 @@ footer .list-produk i {
         font-size: 32px !important;
     }
 }
+
 
 
 
@@ -2940,6 +3045,7 @@ footer .list-produk i {
 
 
 
+
 /* TESTIMONIAL SECTION */
 .testimonial-section {
     position: relative;
@@ -3023,7 +3129,7 @@ footer .list-produk i {
     width: 100%;
 }
 
-/* IMAGE - PERSEGI 1:1 */
+/* IMAGE */
 .testimonial-image {
     position: relative;
     width: 100%;
@@ -3162,6 +3268,11 @@ footer .list-produk i {
         padding: 40px 15px 50px;
     }
 
+    .testimonial-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .testimonial-header {
         margin-bottom: 25px;
     }
@@ -3172,10 +3283,22 @@ footer .list-produk i {
     }
 
     .testimonial-grid {
+        display: grid;
         grid-template-columns: 1fr;
-        gap: 15px;
-        max-width: 340px;
+        gap: 14px;
+        width: 100%;
+        max-width: 100%;
         margin: 0 auto;
+    }
+
+    /* CARD HORIZONTAL */
+    .testimonial-card {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        width: 100%;
+        min-width: 0;
+        border-radius: 12px;
     }
 
     .testimonial-card:last-child {
@@ -3183,51 +3306,74 @@ footer .list-produk i {
         width: 100%;
     }
 
-    .testimonial-card {
-        border-radius: 12px;
+    /* FOTO DI KIRI */
+    .testimonial-image {
+        flex: 0 0 34%;
+        width: 34%;
+        min-width: 0;
+        aspect-ratio: auto;
+        height: auto;
+        align-self: stretch;
+        background: #e8f3e4;
     }
 
-    .testimonial-image {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        height: auto;
+    .testimonial-image::after {
+        background: linear-gradient(to top, rgba(7, 61, 48, 0.12), transparent 45%);
     }
 
     .testimonial-image img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         object-position: center;
     }
 
+    .testimonial-card:hover .testimonial-image img {
+        transform: none;
+    }
+
+    .testimonial-image-number {
+        right: 7px;
+        bottom: 7px;
+        font-size: 10px;
+    }
+
+    /* KETERANGAN DI KANAN */
     .testimonial-content {
-        padding: 14px;
+        flex: 1;
+        min-width: 0;
+        padding: 14px 13px;
     }
 
     .testimonial-quote {
         font-size: 23px;
+        margin-bottom: 5px;
     }
 
     .testimonial-content p {
+        flex: 1;
+        margin: 0 0 12px;
         font-size: 12px;
-        line-height: 1.65;
+        line-height: 1.6;
+    }
+
+    .testimonial-author {
+        gap: 7px;
+    }
+
+    .testimonial-author-line {
+        width: 16px;
     }
 
     .testimonial-author h3 {
         font-size: 13px !important;
-    }
-
-    .testimonial-image-number {
-        right: 10px;
-        bottom: 9px;
-        font-size: 10px;
     }
 }
 
 /* SMALL MOBILE */
 @media (max-width: 380px) {
     .testimonial-section {
-        padding: 30px 12px 35px;
+        padding: 30px 15px 35px;
     }
 
     .testimonial-header h2 {
@@ -3235,17 +3381,20 @@ footer .list-produk i {
     }
 
     .testimonial-grid {
-        max-width: 310px;
         gap: 12px;
     }
 
+    .testimonial-card {
+        border-radius: 10px;
+    }
+
     .testimonial-image {
-        aspect-ratio: 1 / 1;
-        height: auto;
+        flex-basis: 32%;
+        width: 32%;
     }
 
     .testimonial-content {
-        padding: 13px;
+        padding: 12px 10px;
     }
 
     .testimonial-quote {
@@ -3254,13 +3403,20 @@ footer .list-produk i {
 
     .testimonial-content p {
         font-size: 11px;
-        line-height: 1.6;
+        line-height: 1.55;
     }
 
     .testimonial-author h3 {
         font-size: 12px !important;
     }
+
+    .testimonial-image-number {
+        right: 6px;
+        bottom: 6px;
+        font-size: 9px;
+    }
 }
+
 
 
 
