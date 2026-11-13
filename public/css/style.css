@@ -44,28 +44,103 @@ button,
 
 /* Akhir global CSS */
 
-/* Header */
+/* HEADER DESKTOP */
 .header-desktop {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     background-color: #ffffff;
     z-index: 9999999;
-    margin: -10px 0;
+    margin: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
-.menu {
-    border-radius: 15px 15px 0 0;
+.header-desktop .container {
+    min-height: 75px;
+}
+
+.header-desktop .navbar-brand img {
+    display: block;
+    width: 180px;
+    height: auto;
+}
+
+.header-desktop .header > .d-flex {
+    display: flex;
+    align-items: center;
+    gap: 35px;
 }
 
 .header-desktop .header .nav-link {
+    display: inline-block;
+    padding: 10px 0;
     color: #045323;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 15px;
     font-weight: 600;
+    white-space: nowrap;
+    transition: color 0.2s ease;
 }
 
+.header-desktop .header .nav-link:hover,
+.header-desktop .header .nav-link.active {
+    color: #F2C300;
+}
+
+/* HEADER MOBILE */
+.header-mobile {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999999;
+    background: #ffffff;
+}
+
+.header-mobile .menu {
+    border-radius: 15px 15px 0 0;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.header-mobile .menu > .d-flex {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-mobile .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 65px;
+}
+
+.header-mobile .icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 12px;
+}
+
+.header-mobile .icon p {
+    margin: 2px 0 0;
+    color: #045323;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+/* MENU GLOBAL */
+.nav-link,
+.header-mobile .icon p {
+    color: #045323;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+/* HEADER BERANDA */
 .header-beranda {
-    background-image: url('../images/bg-hero.webp');
+    background-image: url('public/images/bg-hero.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -94,10 +169,6 @@ button,
 .header-beranda .container .image-header img {
     width: 100%;
     padding-left: 50px;
-}
-
-.menu .icon p {
-    margin: -7px 0 5px 0;
 }
 
 .menu .icon a i {
@@ -141,7 +212,7 @@ button,
     font-weight: 700;
 }
 
-/* Akhir header */
+/* AKHIR HEADER */
 
 
 /* Section Produk */
