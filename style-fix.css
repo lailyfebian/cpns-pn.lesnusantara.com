@@ -2222,6 +2222,7 @@ footer .list-produk i {
 
 
 
+
 /* ADVANTAGE SECTION */
 .advantage-section {
     position: relative;
@@ -2294,6 +2295,7 @@ footer .list-produk i {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
     align-items: stretch;
+    width: 100%;
 }
 
 /* CARD */
@@ -2302,6 +2304,7 @@ footer .list-produk i {
     display: flex;
     flex-direction: column;
     min-width: 0;
+    width: 100%;
     padding: 25px 23px 27px;
     background: #ffffff;
     border: 1px solid #dcebdd;
@@ -2455,7 +2458,15 @@ footer .list-produk i {
 /* MOBILE */
 @media (max-width: 600px) {
     .advantage-section {
+        width: 100%;
         padding: 35px 15px 45px;
+    }
+
+    .advantage-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .advantage-header {
@@ -2471,11 +2482,19 @@ footer .list-produk i {
     }
 
     .advantage-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
         gap: 13px;
     }
 
     .advantage-card {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
         padding: 20px 18px 22px;
         border-radius: 17px;
     }
@@ -2511,11 +2530,21 @@ footer .list-produk i {
 
 /* SMALL MOBILE */
 @media (max-width: 380px) {
+    .advantage-section {
+        padding: 30px 12px 40px;
+    }
+
     .advantage-header h2 {
         font-size: 22px;
     }
 
+    .advantage-grid {
+        width: 100%;
+        gap: 12px;
+    }
+
     .advantage-card {
+        width: 100%;
         padding: 18px 16px 20px;
     }
 
@@ -2529,6 +2558,7 @@ footer .list-produk i {
         font-size: 32px !important;
     }
 }
+
 
 
 /* TUTOR SECTION */
